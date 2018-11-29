@@ -23,6 +23,7 @@ requirements:
     - pip
   run:
     - python
+    - future  # [py2k]  needed for builtins as used in pyqt4 code from pyface
     - pyqt 4.11.*
     - traitsui
     - six
