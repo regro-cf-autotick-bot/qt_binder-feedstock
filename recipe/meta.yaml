@@ -22,7 +22,7 @@ requirements:
     - setuptools
   run:
     - python
-    - pyqt 4.11.*
+    - pyqt
     - traitsui
     - six
 
