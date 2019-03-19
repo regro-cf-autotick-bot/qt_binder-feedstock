@@ -1,4 +1,4 @@
-{% set version = "0.2" %}
+{% set version = "0.2.1" %}
 
 package:
   name: qt_binder
@@ -7,13 +7,13 @@ package:
 source:
   fn: qt_binder-{{ version }}.tar.gz
   url: https://pypi.python.org/packages/source/q/qt_binder/qt_binder-{{ version }}.tar.gz
-  sha256: 392a105a6a1734e1f67e17b88ee72225be594dfc0000dc3d53e254a1b8a532e5
+  sha256: e7b490875f19b64004f4e1177a179f891449b8316f0e0a3de770168477ece84c
   patches:
     # fix pyqt & python3 bugs: https://github.com/enthought/qt_binder/pull/48
     - py3_fixes.patch
 
 build:
-  number: 1001
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv
   skip: True  # [py>36]  # no pyqt 4.11.* for Python 3.7
 
